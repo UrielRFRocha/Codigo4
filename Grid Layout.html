@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        ul,
+        li,
+
+        p {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-size: 1.2rem;
+            font-family: Arial;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 {
+
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .header {
+            background: #1d1e20;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+
+        }
+
+        .menu li {
+            margin-left: 10px;
+
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+
+        }
+
+        /* Flaxbox 1*/
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flex>div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        /*CSS GRID 1*/
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 780px;
+            padding: 10px;
+            margin: 0 auto;
+            grid-gap: 20px;
+
+        }
+
+        .grid>div:nth-child(n + 4) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            align-items: center;
+        }
+
+        .grid>div.anuncio {
+            grid-column: 1;
+            grid-row: 2 / 5;
+            border-top: 10px solid tomato;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid>div:nth-child(n + 4) {
+                display: block;
+            }
+
+            .grid>div.anuncio {
+                grid-column: auto;
+                grid-row: auto;
+                order: -1;
+            }
+
+        }
+
+        /*CSS Grid 2*/
+
+
+        /*CSS GRID 1*/
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            padding: 10px;
+            max-width: 800px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .sidebar>div {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .grid2 {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: flex;
+                overflow: scroll;
+            }
+
+            .sidebar > div {
+                flex: 1 1 200px;
+                margin: 0 10px;
+            }
+        }
+
+        /*SECTION GRID 3*/
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .grid3-item:nth-child(1) {
+            grid-row: 1 / 3;
+        }
+
+        .grid3-item {
+            display: grid;
+        }
+
+        .grid3-item img {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            align-self: end;
+
+        }
+
+        .grid3-item p {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            color: white;
+            grid-column: 1;
+            grid-row: 2;
+            align-self: end;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="">logo</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Produto</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Selection Flexbox</h1>
+
+    <section class="flex">
+        <div>
+            <img src="lobo.png">
+            <p>Lobo</p>
+        </div>
+        <div>
+            <img src="ww.png">
+            <p>Wtzapp</p>
+        </div>
+        <div>
+            <img src="code.png">
+            <p>Vs Code</p>
+        </div>
+    </section>
+
+    <h1>Sction Grid 1</h1>
+
+    <section class="grid">
+        <div>
+            <img src="filme7.jpg">
+            <p> A Bela e a Fera</p>
+        </div>
+
+        <div>
+            <img src="filme3.jpg">
+            <p>Rei Leão</p>
+        </div>
+        <div>
+            <img src="filme4.jpg">
+            <p> Os Vingadores</p>
+        </div>
+
+        <div>
+            <img src="filme8.jpg">
+            <p>A Procura da Felicidade</p>
+        </div>
+
+        <div>
+            <img src="filme9.jpg">
+            <p>Alice no País das Maravilhas</p>
+        </div>
+        <div>
+            <img src="filme10.jpg">
+            <p>Sem Volta para Casa</p>
+        </div>
+
+        <div>
+            <img src="filme2.jpg">
+            <p>Capitão América</p>
+        </div>
+
+        <div>
+            <img src="filme11.jpg">
+            <p>Harry Potter</p>
+        </div>
+
+        <div>
+            <img src="filme12.jpg">
+            <p>Encanto</p>
+        </div>
+
+        <div class="anuncio">
+            <img src="filme1.jpg">
+            <p>Anuncio</p>
+        </div>
+    </section>
+
+    <h1>Section Grid 2</h1>
+
+    <section class="grid2">
+        <div class="video">
+            <img src="filme13.jpg">
+            <p>Dora Aventureira</p>
+
+        </div>
+        <div class="sistema">
+            <div>
+                <img src="filme14.jpg">
+                <p>Kung Fu Panda 3</p>
+            </div>
+            <div>
+                <img src="filme15.jpg">
+                <p>Divertidamente</p>
+            </div>
+            <div>
+                <img src="filme16.jpg">
+                <p>Velozese Furiosos/p>
+            </div>
+            <div>
+                <img src="filme17.jpg">
+                <p>Pantera Negra</p>
+            </div>
+        </div>
+
+    </section>
+
+    <h1>Selection Grid 3</h1>
+
+    <srction class="grid3">
+        <div class="grid3-item">
+            <img src="filme18.jpg">
+            <p>Em Ritimode Fuga</p>
+        </div>
+        <div class="grid3-item">
+            <img src="filme19.jpg">
+            <p>John Wick</p>
+        </div>
+        <div class="grid3-item">
+            <img src="filme20.jpg">
+            <p>Alerta Vermelho</p>
+        </div>
+        </srction>
+
+</body>
+
+</html>
